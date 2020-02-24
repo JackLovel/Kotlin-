@@ -54,10 +54,12 @@ fun main() {
 //    val responses = listOf("200 OK", "418 I'm a teapot", "500 Internal server error")
 //    printProblemCounts(responses)
 
-    val createPerson = ::Person
-    val p = createPerson("alice", 29)
-    println(p)
-
-    val predicate = Person::isAdult
-    println(predicate(p))
+//    val createPerson = ::Person
+//    val p = createPerson("alice", 29)
+//    println(p)
+//
+//    val predicate = Person::isAdult
+//    println(predicate(p))
+    val people = listOf(Person("Alice", 12), Person("Bob", 13))
+    println(people.asSequence().map(Person::name).filter { it.startsWith("A") }.toList())
 }
