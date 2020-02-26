@@ -1,6 +1,7 @@
 package `class`
 
 class Person2(val firstName: String, val lastName: String) {
+
     override fun equals(o: Any?): Boolean {
         val otherPerson = o as? Person2 ?: return false
 
